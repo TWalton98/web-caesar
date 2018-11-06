@@ -26,8 +26,8 @@ form = """
         </style>
     </head>
     <body>
-    <form action="index.html" method="post">
-      <input type="text" id="0" name="rot">
+    <form method="post">
+      <input value="0" type="text" id="" name="rot">
       <textarea name="text"></textarea>
       <button>Submit Message</button>
     </form>
@@ -35,8 +35,12 @@ form = """
 </html>
 
 """
-@app.route("/")
+
+def encrypt():
+@app.route("/", method=['POST'])
+
+
 def index():
-    return "Hello World"
+    return form
   
 app.run()
